@@ -15,12 +15,13 @@
 <script>
 	import Header from './components/Header/Header.vue';
 	import LoginAndRegister from './components/LoginAndRegister/LoginAndRegister.vue';
+	
 	export default{
 		name: 'App',
 		components: {
 			Header,
 			LoginAndRegister
-		}
+		},
 	}
 </script>
 

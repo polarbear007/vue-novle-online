@@ -1,10 +1,10 @@
 <template>
 	<div id="header-nav">
 		<el-row>
-			<el-menu mode="horizontal" router>
+			<el-menu mode="horizontal" router >
 				<el-submenu index="1">
 					<template v-slot:title>
-						<router-link :to="{path: '/all', query:{currentPage: 1, pageSize: 10, category: 0}}" tag='span'>全部分类</router-link>
+						<router-link :to="{path: '/all', query:{currentPage: 1, pageSize: 10}}" tag='span'>全部分类</router-link>
 					</template>
 					<el-menu-item index="1-1" :route="{path: '/all', query:{currentPage: 1, pageSize: 10, category: 1}}">现代言情</el-menu-item>
 					<el-menu-item index="1-2" :route="{path: '/all', query:{currentPage: 1, pageSize: 10, category: 2}}">古代言情</el-menu-item>
@@ -20,7 +20,7 @@
 				
 				<el-menu-item index="2" :route="{path: '/rank'}">排行榜</el-menu-item>
 				<el-menu-item index="3" :route="{path: '/free', query:{isFree: 2}}">免费</el-menu-item>
-				<el-menu-item index="4" :route="{path: '/finish', query: {state: 2}}">完本</el-menu-item>
+				<el-menu-item index="4" :route="{path: '/finish', query: {bookState: 2}}">完本</el-menu-item>
 				<el-menu-item index="5">现言青春</el-menu-item>
 				<el-menu-item index="6">古言玄幻</el-menu-item>
 				<el-menu-item index="7">神秘幻想</el-menu-item>

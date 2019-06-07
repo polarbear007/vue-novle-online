@@ -9,6 +9,9 @@ import Finance from '../views/My/components/Finance/Finance.vue';
 import Search from '../views/Search/Search.vue';
 import BookFilter from '../views/BookFilter/BookFilter.vue';
 import Rank from '../views/Rank/Rank.vue';
+import Error from '../views/Error/Error.vue';
+import Book from '../views/Book/Book.vue';
+import Chapter from '../views/Chapter/Chapter.vue';
 
 // 因为在加载的 router 对象的时候，可能 store 对象还没有加载，所以我们只能使用
 // import 引入，不能使用 this 
@@ -42,6 +45,18 @@ let router = new VueRouter({
 		{
 			path: '/finish',
 			component: BookFilter
+		},
+		{
+			path: '/error',
+			component: Error
+		},
+		{
+			path: '/book/:bookId',
+			component: Book
+		},
+		{
+			path: '/chapter/:bookId/:chapterId',
+			component: Chapter
 		},
 		{
 			path: '/my',
@@ -101,6 +116,6 @@ router.beforeEach((to, from, next)=>{
 	}else{
 		next();
 	}
-})
+});
 
 export default router;
